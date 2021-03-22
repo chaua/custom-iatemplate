@@ -1,2 +1,6 @@
-# template-iawriter
-Conjunto de templates para IA Writer
+# Templates para IA Writer
+
+Conjunto de templates customizados para IA Writer.
+
+- Modelo-PDF: adaptado de [GitHub-MathML](https://github.com/jhermsmeier/github-math-iatemplate)
+
