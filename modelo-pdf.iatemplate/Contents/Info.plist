@@ -9,10 +9,10 @@
   <string>en</string>
 
   <key>CFBundleShortVersionString</key>
-  <string>1.0.0</string>
+  <string>1.0.1</string>
 
   <key>CFBundleVersion</key>
-  <string>1</string>
+  <string>2</string>
 
   <key>CFBundleName</key>
   <string>Modelo-PDF</string>
@@ -23,6 +23,9 @@
   <key>IATemplateDocumentFile</key>
   <string>document</string>
 
+  <key>IATemplateFooterFile</key>
+  <string>footer</string>
+
   <key>IATemplateDescription</key>
   <string>Document style for PDF format</string>
 
@@ -32,10 +35,10 @@
   <key>IATemplateAuthorURL</key>
   <string>https://www.koruthos.com.br</string>
 
-  <!-- <key>IATemplateFooterHeight</key>
+  <key>IATemplateFooterHeight</key>
   <integer>90</integer>
 
   <key>IATemplateHeaderHeight</key>
-  <integer>90</integer> -->
+  <integer>90</integer>
 </dict>
 </plist>

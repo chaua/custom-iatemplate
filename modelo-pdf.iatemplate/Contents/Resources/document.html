@@ -7,46 +7,78 @@
   <link rel="stylesheet" type="text/css" href="res/github-markdown.css">
   <link rel="stylesheet" type="text/css" href="res/github.css">
   <link rel="stylesheet" type="text/css" href="res/highlight/styles/github-gist.css">
-  <script type="text/javascript" src="res/texzilla.js"></script>
   <script type="text/javascript" src="res/highlight/highlight.pack.js"></script>
   <script type="text/javascript" src="res/main.js"></script>
 
-  <!-- MathJax-->
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-      }
-    });
-    </script>
+  <style>
+    body {
+      hyphens: auto;
+      text-align: justify;
+    }
 
-  <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      hyphens: false;
+      text-align: left;
+    }
 
-    <style>
-      body {
-        hyphens: auto;
-        text-align: justify;
-      }
-      h1, h2, h3, h4, h5 {
-        hyphens: false;
-        text-align: left;
-      }
-      ol li ol li {
-        list-style-type: lower-alpha;
-      }
-      ol li ol li ol li {
-        list-style-type: upper-roman;
-      }
+    ol li ol li {
+      list-style-type: lower-alpha;
+    }
 
-    </style>
+    ol li ol li ol li {
+      list-style-type: upper-roman;
+    }
+
+    figure {
+      text-align: center;
+    }
+
+    table {
+      margin: auto;
+    }
+
+    .footnotes hr {
+      height: 0;
+      padding: 0;
+      margin: -5px;
+      border: 0;
+    }
+
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+    }
+
+    .footnotes ol {
+      counter-reset: list;
+    }
+
+    .footnotes ol>li {
+      list-style: none;
+      position: relative;
+    }
+
+    .footnotes ol>li:before {
+      content: "["counter(list) "]";
+      counter-increment: list;
+      left: -40px;
+      padding-right: 10px;
+      position: absolute;
+      text-align: right;
+      width: 45px;
+    }
+
+  </style>
 
 
 </head>
 
-<body class="markdown-body" data-document>  
+<body lang="pt-br" class="markdown-body" data-document>
 </body>
 
 </html>
