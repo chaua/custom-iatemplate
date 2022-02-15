@@ -4,25 +4,105 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="res/github-markdown.css">
   <link rel="stylesheet" type="text/css" href="res/github.css">
   <link rel="stylesheet" type="text/css" href="res/highlight/styles/github-gist.css">
   <script type="text/javascript" src="res/highlight/highlight.pack.js"></script>
   <script type="text/javascript" src="res/main.js"></script>
-
+  
   <style>
+    @font-face {
+      font-family: title1;
+      src: url(res/fonts/Montserrat-Black.ttf);
+    }
+
+    @font-face {
+      font-family: title2;
+      src: url(res/fonts/Montserrat-Bold.ttf);
+    }
+
+    @font-face {
+      font-family: title3;
+      src: url(res/fonts/Montserrat-SemiBold.ttf);
+    }
+
+    @font-face {
+      font-family: normal;
+      src: url(res/fonts/Montserrat-Light.ttf);
+    }
+
+    @font-face {
+      font-family: strong;
+      src: url(res/fonts/Montserrat-Bold.ttf);
+    }
+
     body {
       hyphens: auto;
       text-align: justify;
     }
 
-    h1,
+    .markdown-body h1,
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    h6 {
       hyphens: false;
       text-align: left;
+    }
+
+    .markdown-body h1 {
+      font-family: title1;
+      margin-top: 0;
+      margin-bottom: 1em;
+      font-size: 22pt;
+      border-bottom: 0px solid #eaecef;
+    }
+
+    .markdown-body h2 {
+      font-family: title2;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-size: 16pt;
+      border-bottom: 0px solid #eaecef;
+    }
+
+    .markdown-body h3 {
+      font-family: title3;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-size: 14pt;
+      font-weight: bold;
+    }
+
+
+    .markdown-body {
+      font-family: serif; 
+      font-size: 12pt;
+      line-height: 1.2;
+    }
+
+    .markdown-body b,
+    strong {
+      /*font-family: strong;*/
+    }
+
+    .markdown-body blockquote {
+      padding: 1em;
+      font-family: normal; 
+      font-size: 10pt;
+    }
+
+    .markdown-body blockquote strong {
+      font-family: strong; 
+      font-size: 10pt;
+    }
+
+    .markdown-body ol,
+    li {
+      margin-bottom: 6pt;
+      margin-top: 3pt;
     }
 
     ol li ol li {
@@ -39,6 +119,11 @@
 
     table {
       margin: auto;
+      border: none;
+    }
+
+    thead {
+      font-family: strong;
     }
 
     .footnotes hr {
@@ -72,13 +157,39 @@
       text-align: right;
       width: 45px;
     }
-
   </style>
-
 
 </head>
 
 <body lang="pt-br" class="markdown-body" data-document>
 </body>
+
+<script>
+  const quotes = document.querySelectorAll('blockquote')
+  for (var i = 0; i < quotes.length; i++) {
+    if (quotes[i].innerHTML.indexOf('[warn]') !== -1) {
+      quotes[i].style.backgroundColor = '#FFFDE7';
+      quotes[i].style.borderColor = '#FBC02D';
+      quotes[i].innerHTML = quotes[i].innerHTML.replace('[warn]', '<i class="fas fa-exclamation-circle" style="color: #FBC02D"></i>')
+    }
+    else if (quotes[i].innerHTML.indexOf('[error]') !== -1) {
+      quotes[i].style.backgroundColor = '#FFEBEE';
+      quotes[i].style.borderColor = '#D32F2F';
+      quotes[i].innerHTML = quotes[i].innerHTML.replace('[error]', '<i class="fas fa-times-circle" style="color: #D32F2F"></i>')
+    }
+    else if (quotes[i].innerHTML.indexOf('[success]') !== -1) {
+      quotes[i].style.backgroundColor = '#E8F5E9';
+      quotes[i].style.borderColor = '#388E3C';
+      quotes[i].innerHTML = quotes[i].innerHTML.replace('[success]', '<i class="fas fa-check-circle" style="color: #388E3C"></i>')
+    }
+    else if (quotes[i].innerHTML.indexOf('[info]') !== -1) {
+      quotes[i].style.backgroundColor = '#E3F2FD';
+      quotes[i].style.borderColor = '#1976D2';
+      quotes[i].innerHTML = quotes[i].innerHTML.replace('[info]', '<i class="fas fa-info-circle" style="color: #1976D2"></i>')
+    }
+  }
+
+</script>
+
 
 </html>
